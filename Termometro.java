@@ -1,0 +1,26 @@
+package POO;
+
+public class Termometro {
+    public double temperatura;
+
+    public Termometro (){
+        this.temperatura = 36.2;
+    }
+    public void subir (double grados){
+        temperatura= temperatura + grados;     
+    }
+     public void bajar (double grados){
+        temperatura= temperatura - grados;
+    }
+    public String estado (){
+        return  "temperatura:" + temperatura + "c";
+    }
+    public static void main(String[] args) {
+        Termometro ter = new Termometro();
+        System.out.println(ter.estado());
+        ter.subir(5);
+        System.out.println(ter.estado());
+        ter.bajar(5);
+        System.out.println(ter.estado());
+    }
+}
